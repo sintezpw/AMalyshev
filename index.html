@@ -25,7 +25,7 @@
 							<a href="" class="header-nav__link">клиенты</a>
 						</li>
 						<li>
-							<a href="" class="header-nav__link">магазин</a>
+							<a href="shop.html" target="_blank" class="header-nav__link--active">магазин</a>
 						</li>
 						<li>
 							<a href="" class="header-nav__link">контакты</a>
@@ -59,12 +59,12 @@
 							<img src="" alt="pic">
 						</div>
 						<div class="slider-controls">
-							<input type="radio" name="slaides" id="point1">
-							<input type="radio" name="slaides" id="point2" checked>
-							<input type="radio" name="slaides" id="point3" >
-							<label for="point1"></label>
-							<label for="point2"></label>
-							<label for="point3"></label>
+							<input class="slider-controls__input" type="radio" name="slaides" id="point1">
+							<input class="slider-controls__input" type="radio" name="slaides" id="point2" checked>
+							<input class="slider-controls__input"  type="radio" name="slaides" id="point3" >
+							<label class="slider-controls__label" for="point1"></label>
+							<label class="slider-controls__label" for="point2"></label>
+							<label class="slider-controls__label" for="point3"></label>
 						</div>
 					</div>
 				</div>
@@ -196,23 +196,23 @@
 					тел. +7 (812) 275-75-75</p>
 				<button class="btn-address">Напишите нам</button>
 				<div class="modal-hidden">
-<h2 class="modal-hidden__title">Напишите нам</h2>
-<div class="modal-form__grup">
-	<form action="#" enctype="multipart/form-data" method="post">
-		<p><label for="name" class="modal-label">Ваше имя:</label><br>
-			<input type="text"  id="name" placeholder="Представтесь пожалуйста" class="modal-input">
-		</p>
-		<p>
-			<label for="email" class="modal-label">Ваше e-mail:</label>
-			<br>
-			<input type="email" id="email" placeholder="Для отправки ответа" class="modal-input">
-		</p>
-		<p><label for="text" class="modal-label">Текст письма:</label><br>
-		<textarea name="text" id="" cols="30" rows="0" placeholder="В свободной форме" class="modal-textarea"></textarea>
-		</p>
-		<input type="submit" value="отправить" class="modal-hidden__btn">
-	</form>
-</div>
+					<h2 class="modal-hidden__title">Напишите нам</h2>
+				<div class="modal-form__grup">
+					<form action="#" enctype="multipart/form-data" method="post">
+						<p><label for="name" class="modal-label">Ваше имя:</label><br>
+						<input type="text"  id="name" placeholder="Представтесь пожалуйста" class="modal-input">
+						</p>
+						<p>
+						<label for="email" class="modal-label">Ваше e-mail:</label>
+						<br>
+						<input type="email" id="email" placeholder="Для отправки ответа" class="modal-input">
+						</p>
+						<p><label for="text" class="modal-label">Текст письма:</label><br>
+						<textarea name="text" id="" cols="30" rows="0" placeholder="В свободной форме" class="modal-textarea"></textarea>
+						</p>
+						<input type="submit" value="отправить" class="modal-hidden__btn">
+					</form>
+				</div>
 				</div>
 			</div>
 		</div>
