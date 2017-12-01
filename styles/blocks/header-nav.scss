@@ -1,0 +1,46 @@
+
+.header-nav{
+    display:flex;
+    flex-wrap:wrap; 
+    background-color:#eee;
+    height: 545px;
+&__logo{
+    margin-top:40px;
+    @include logos;
+}
+&__list {
+    list-style: none;
+    display: flex;
+    margin-top: 73px;
+    margin-left: 100px;
+    flex-wrap:wrap;
+} 
+&__link{
+    color:$black;
+    @include link;
+    @include link-text;
+    margin-left: 50px;
+}
+&__link--active{
+    color:$black;
+    @include link;
+    @include link-text;
+    margin-left: 50px;
+}
+&__basket{
+    margin-top: 73px;
+}
+&__basket-text{
+    color:$black;
+    @include link;
+    @include link-text;
+    margin-left: 250px;
+}
+&__basket-icon{
+    padding-right: 20px;
+}
+   }
+
+
+    
+    

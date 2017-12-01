@@ -1,0 +1,20 @@
+@mixin logos{
+    &:hover{
+        opacity:0.8;
+    &:active{
+        opacity:0.3;
+   }
+}
+ }
+@mixin link{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+@mixin link-text{
+    font: {
+        family:Roboto;
+        size: 16px;
+        weight:500;
+line-height: 30px;
+    }
+}
