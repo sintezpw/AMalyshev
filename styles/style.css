@@ -1,0 +1,12 @@
+body{
+	width: 100%;
+	min-width: 1440px;
+}
+.wrapper{
+	width: 1160px;
+	margin: 0 auto;
+}
+h1 {
+	color: #000;
+	text-align: center;
+}
