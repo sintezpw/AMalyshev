@@ -1,0 +1,29 @@
+.description-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    
+  
+    margin-right: 100px;
+    width: 300px;
+&__title{
+        color: #000000;
+        margin-top: 20px;
+        text-align:left;
+        font-family: 'Roboto';
+       font-size: 24px;
+       font-weight: 700;
+       text-transform: uppercase; 
+     
+    }
+&__item{
+     font-family: 'Roboto';
+       font-size: 16px;
+       font-weight: 400;
+    margin-top: 3px;  
+    text-align: left;
+    color: #283136;
+     width: 244px;
+}
+
+}
