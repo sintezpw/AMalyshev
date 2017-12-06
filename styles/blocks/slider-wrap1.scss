@@ -1,0 +1,38 @@
+.slider-wrap1{
+    display: flex;
+    flex-direction:column ;
+    position: relative;
+    margin-top:0px;  
+    height: 420px;
+&__title{
+    width: 378px;
+        color:$black;
+@include slaid-title;
+    margin-top: 40px;
+}
+&__desc{
+    width: 360px;
+   @include slaid-text;
+    line-height: 24px;
+    margin-top: -18px;
+}
+&__pic1{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:-312px;
+}
+&__learn-more{
+    width: 240px;
+    padding: 19px 0 19px 0;
+    border: none;
+    background-color: $btnred;
+    text-transform: $transform;
+    border-radius: 2px;
+    color: $white;
+    @include links;
+    cursor: pointer;
+    position: relative;
+    margin-top: 22px;
+    @include btnred;
+}
+}

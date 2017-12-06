@@ -1,0 +1,51 @@
+@mixin logo-efect{
+   &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.3;
+    }
+}
+@mixin links{
+    font: {
+        family:'Roboto';
+        size:16px;
+        weight:500;
+}
+}
+@mixin link-efekt{
+    &:hover{
+        color:$btnred;
+    }
+    &:active{
+        color: #000000;
+       opacity: 0.3;  
+    }
+}
+@mixin slaid-title{
+   font: {
+       family:'Roboto';
+       size: 52px;
+       weight:500;
+   }
+}
+@mixin slaid-text{
+    font: {
+        family:'Roboto';
+        size: 16px;
+        weight:400;
+        }
+    color: #283136;
+}
+@mixin btnred{
+    &:hover{
+        background-color: #e74246;
+    }
+    &:active{
+        background-color: #d7373b;
+        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+        color: $white;
+        opacity: 0.3;
+    }
+}
+

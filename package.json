@@ -21,6 +21,10 @@
 	"homepage": "https://github.com/aleksmal76/AMalyshev#readme",
 	"dependencies": {},
 	"devDependencies": {
+ homework-2
+		"node-sass": "^4",
+
+ master
 		"@pingy/cli": "^0.10.3"
 	}
 }
