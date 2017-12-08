@@ -285,7 +285,11 @@ header {
   transform: scale(1); }
 
 .description {
-  display: flex; }
+  display: flex;
+  padding-bottom: 40px; }
+
+.line--bg {
+  border-bottom: 2px solid #eeeeee; }
 
 .header-nav {
   display: flex;
@@ -599,5 +603,32 @@ header {
     -moz-transition: background ease-in-out .5s;
     -o-transition: background ease-in-out .5s;
     transition: background ease-in-out .5s; }
+
+.discription-company__title {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 24px;
+  width: 400px; }
+.discription-company__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px; }
+.discription-company .description-orders__link {
+  text-decoration: none;
+  color: red; }
+.discription-company .promo-company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -240px; }
+  .discription-company .promo-company__subtitle {
+    display: flex;
+    flex-direction: column; }
+  .discription-company .promo-company__info {
+    display: flex; }
+.discription-company .clients-company {
+  display: flex;
+  justify-content: space-between; }
 
 /*# sourceMappingURL=main.css.map */
