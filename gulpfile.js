@@ -20,10 +20,36 @@ var rename = require("gulp-rename");
 var run = require("run-sequence");
 
 
+var patch ={
+    build:{
+        html:'build/',
+        js:'build/js/',
+        css:'build/css/',
+        img:'build/img/',
+        fonts:'build/fonts/'
+    },
+    src:{
+        html:'src/.html',
+        js:'src/js/main.js',
+        style:'src/sass/main.scss',
+        img:'srs/img/**/*.*',
+        fonts:'src/fonts/**/*. */'
+    },
+    watch:{
+        html: 'src/**/*.html',
+        js: 'src/js/**/*.js',
+        style: 'src/sass/**/*.scss',
+        img: 'src/img/**/*.*',
+        fonts: 'src/fonts/**/*.*'
+
+    },
+    clean:'./build'
+};
+
 gulp.task("style", function () {
-    gulp.src("less/style.less")
+    gulp.src("sass/main.scss")
         .pipe(plumber())
-        .pipe(less())
+        .pipe(sass())
         .pipe(postcss([
             autoprefixer()
         ]))
@@ -35,8 +61,8 @@ gulp.task("style", function () {
 });
 
 gulp.task("normalize", function () {
-    gulp.src("sass/normalize.sass")
-        .pipe(less())
+    gulp.src("sass/normalize.scss")
+        .pipe(sass())
         .pipe(postcss([
             autoprefixer()
         ]))
@@ -46,7 +72,7 @@ gulp.task("normalize", function () {
         .pipe(gulp.dest("build/css"));
 });
 
-gulp.task("serve", function () {
+gulp.task("server", function () {
     server.init({
         server: "build/",
         notify: false,
@@ -55,7 +81,7 @@ gulp.task("serve", function () {
         ui: false
     });
 
-    gulp.watch("sass/**/*.sass", ["style"]);
+    gulp.watch("sass/**/*.scss", ["style"]);
     gulp.watch("img/*.svg", ["svgUpdate"]).on("change", server.reload);
     gulp.watch("*.html", ["html"]).on("change", server.reload);
 });
@@ -128,82 +154,12 @@ gulp.task("build", function (done) {
     );
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-gulp.task('sass', function () {
-    gulp.src('./assets/style/style.scss') // файл, который обрабатываем
-        .pipe(sass().on('error', sass.logError)) // конвертируем sass в css
-        .pipe(csso()) // минифицируем css, полученный на предыдущем шаге
-        .pipe(gulp.dest('./public/css/'));
-});
-gulp.task('img', function () {
-    gulp.src('.assets/img/**/*') // берем любые файлы в папке и ее подпапках
-        .pipe(imagemin()) // оптимизируем изображения для веба
-        .pipe(gulp.dest('./public/img/')) // результат пишем по указанному адресу
-
-});
-gulp.task('watch', function () {
-    // При изменение файлов *.scss в папке "styles" и подпапках запускаем задачу sass
-    gulp.watch('./assets/style/**/*.scss', ['sass']); 
-    gulp.watch('./assets/img/**/*', ['img']);
-});
-
-
-
-
-
 gulp.task('sass',function () {
    return gulp.src('sass/**/*.sass')
    .pipe (sass())
-   .pipe (gulp.dest('css')) 
+   .pipe (gulp.dest('build/css')) 
 });
 
-
-
-
-
-
-gulp .task('watch',function() {
-    watch([watch.html],function(event ,cb) {
-        gulp.start('html:dev');
-    });
-    watch([watch.sass], function (event, cb) {
-        gulp.start('sass:dev');
-    });
-});
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
@@ -216,107 +172,56 @@ gulp.task('watch',['browser-sync','sass','html'],function() {
     gulp.watch('sass/**/*sass',['sass']);
     gulp.watch('/*.html', browserSync.reload);
 });
-gulp.task("style", function () {
-    gulp.src("sass/style.sass")
-                .pipe(plumber())
-                .pipe(sass())
-                .pipe(postcss([
-                    autoprefixer()
-]))
-    .pipe(gulp.dest("css"))
-        .pipe(minify())
-        .pipe(rename("style.mini.css"))
-        .pipe(gulp.dest("css"))
-        .pipe(server.stream());
-    });
-gulp.task('sass', function () {
-   return  gulp.src('sass/main.sass')
-        .pipe(sass())
-        .pipe(gulp.dest('css'))
-        .pipe(browserSync.reload({stream:true}))
-});
-gulp.task("normalize", function () {
-    gulp.src("sass/normalize.sass")
-        .pipe(sass())
-        .pipe(postcss([
-            autoprefixer()
-        ]))
-        .pipe(gulp.dest("css"))
-        .pipe(minify())
-        .pipe(rename("normalize.min.css"))
-        .pipe(gulp.dest("css"));
-});
-gulp.task("server", function () {
-    server.init({
-        server: "build/",
-        notify: false,
-        open: true,
-        cors: true,
-        ui: false
-    });
-    gulp.watch("sass/**/*.sass", ["style"]);
-    gulp.watch("img/*.svg", ["svgUpdate"]).on("change", server.reload);
-    gulp.watch("*.html", ["html"]).on("change", server.reload);
-});
-gulp.task("html", function () {
-    return gulp.src("*.html")
-        .pipe(posthtml([
-            include()
-        ]))
-        .pipe(gulp.dest("build"));
-});
-gulp.task("webp", function () {
-    return gulp.src("img/**/*.{png,jpg}")
-        .pipe(webp({ quality: 90 }))
-        .pipe(gulp.dest("img"));
-});
-gulp.task("images", function () {
-    return gulp.src("img/**/*.{png,jpg,svg}")
-        .pipe(imagemin([
-            imagemin.optipng({ optimizationLevel: 3 }),
-            imagemin.jpegtran({ progressive: true }),
-            imagemin.svgo()
-        ]))
-        .pipe(gulp.dest("img"));
-});
-gulp.task("sprite", function () {
-    return gulp.src("img/*.svg")
-        .pipe(svgstore({
-            inlineSvg: true
-        }))
-        .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("build/img"));
-});
 
-gulp.task("clean", function () {
-    return del("build");
-});
-gulp.task("copy", function () {
-    return gulp.src([
-        "fonts/**/*.{woff,woff2}",
-        "img/**",
-        "js/**"
-    ], {
-            base: "."
-        })
-        .pipe(gulp.dest("build"));
-});
-gulp.task("svgUpdate", function (done) {
-    run(
-        "sprite",
-        "html",
-        done
-    );
-});
 
-gulp.task("build", function (done) {
-    run(
-        "clean",
-        "copy",
-        "normalize",
-        "style",
-        "sprite",
-        "html",
-        done
-    );
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

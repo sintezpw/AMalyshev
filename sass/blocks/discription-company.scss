@@ -1,0 +1,44 @@
+.discription-company{
+
+  &__title{
+    @include desc ;
+    width: 400px;
+  }
+  &__desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+  .description-orders{
+
+    &__link{
+      text-decoration: none;
+     @include slaidtext;
+
+    }
+  }
+  .promo-company{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -240px;
+    &__logo{
+
+    }
+    &__heading-title{
+
+    }
+    &__subtitle{
+      display: flex;
+      flex-direction: column;
+    }
+    &__info{
+      display: flex;
+    }
+  }
+  .clients-company{
+    display: flex;
+    justify-content: space-between;
+  }
+}
