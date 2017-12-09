@@ -90,6 +90,12 @@ font: {
   size: 24px;
 }
 }
+@mixin desccomp ($size,$weight){
+font: {
+    family:'Roboto';
+}
+font-size: $size;
+}
 @mixin textbtn ($size,$weight){
 font: {
     family:'Roboto';

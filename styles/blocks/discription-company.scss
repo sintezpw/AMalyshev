@@ -1,42 +1,58 @@
 .discription-company{
-
-  &__title{
-    @include desc ;
-    width: 400px;
+ 
+&__title{
+    @include desccomp(45px,500);
+    width: 666px;
+    line-height: 45px;
+    margin-top:80px;
   }
-  &__desc{
+&__desc{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 400px;
+    width: 617px;
+    @include slaidtext;
+    line-height: 24px;
+    margin-top: -15px;
   }
-  .description-orders{
-
-    &__link{
-      text-decoration: none;
-      color: red;
+.description-orders{
+    width: 435px;
+    height: 160px;
+    margin-top: 47px;
+&__title{
+  @include desccomp(16px,700);
+  margin-top: 22px;
+  text-transform: uppercase;
+}
+&__link{
+  
+    @include slaidtext;
+    text-decoration: none;
+    line-height:34px;
+   
     }
   }
-  .promo-company{
+.promo-company{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: -240px;
-    &__logo{
-
+    margin-top: -380px;
+&__logo{
+    width: 100%;
     }
-    &__heading-title{
-
-    }
-    &__subtitle{
+&__heading-title {
+    @include desccomp(16px,700);
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+&__subtitle{
       display: flex;
       flex-direction: column;
     }
-    &__info{
+&__info{
       display: flex;
     }
   }
-  .clients-company{
+.clients-company{
     display: flex;
     justify-content: space-between;
   }
