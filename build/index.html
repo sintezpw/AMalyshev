@@ -5,9 +5,11 @@
   <title>Главная</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="style/fonts.scss">
+  <link rel="stylesheet" href="style/normalize.min.css">
+
+ 
 </head>
 <body>
   <header>
@@ -40,8 +42,8 @@
             </div>
       </div>
       <div class="header-slider">
-              <input class="slider-controls__input" type="radio" name="slaides" id="slider-wrap1" checked>
-              <input class="slider-controls__input" type="radio" name="slaides" id="slider-wrap2" >
+              <input class="slider-controls__input" type="radio" name="slaides" id="slider-wrap1" checked="">
+              <input class="slider-controls__input" type="radio" name="slaides" id="slider-wrap2">
               <input class="slider-controls__input" type="radio" name="slaides" id="slider-wrap3">
       <div class="slider ">
         <div class="slides slider-wrap1">
@@ -139,47 +141,47 @@
             <img src="img/nerds-illustration-jpg.png" alt="pic" class="pic-company">
           </a>
         </div>
-          <h4 class="promo-company__heading-title">с 2004 года Любим точность во всем:</h4>
-        <div class="promo-more">
-        <div class="promo-more__info">
+        <div class="promo-company__heading">
+          <h4 class="company__heading-title">с 2004 года Любим точность во всем:</h4>
+        </div>
+        <div class="promo-company__info">
           <span>146
             <sup>%</sup>
           </span>
-          <p class="promo-more__subtitle">Уровень самоотдачи</p>
+          <p class="promo-company__subtitle">Уровень самоотдачи</p>
         </div>
-        <div class="promo-more__info">
+        <div class="promo-company__info">
           <span>100
             <sup>%</sup>
           </span>
-          <p class="promo-more__subtitle">Соблюдение сроков</p>
+          <p class="promo-company__subtitle">Соблюдение сроков</p>
         </div>
-        <div class="promo-more__info">
+        <div class="promo-company__info">
           <span>50
             <sup>%</sup>
           </span>
-          <p class="promo-more__subtitle">Минимальная предоплата</p>
+          <p class="promo-company__subtitle">Минимальная предоплата</p>
         </div>
-      </div>
       </div>
       <div class="line line--bg"></div>
       <div class="clients-company">
-        <div class="clients-company__logo1">
-          <a href="javascript:void(0);">
+        <div class="company-clients__logo">
+          <a href="">
             <img src="img/logo-1.png" alt="logo">
           </a>
         </div>
-        <div class="clients-company__logo2">
-          <a href="javascript:void(0);">
+        <div class="company-clients__logo">
+          <a href="">
             <img src="img/logo-2.png" alt="logo">
           </a>
         </div>
-        <div class="clients-company__logo3">
-          <a href="javascript:void(0);">
+        <div class="company-clients__logo">
+          <a href="">
             <img src="img/logo-3.png" alt="logo">
           </a>
         </div>
-        <div class="clients-company__logo4">
-          <a href="javascript:void(0);">
+        <div class="company-clients__logo">
+          <a href="">
             <img src="img/logo-4.png" alt="logo">
           </a>
         </div>
@@ -189,8 +191,7 @@
   </div>
   <div class="company-address">
     <div class="promo-company__map">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A373ce4be9dfaf2b8ca69666206b4acfa7013bc0e055a6335be74bbee6dc53be9&amp;source=constructor"
-        width="1440" height="416" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A373ce4be9dfaf2b8ca69666206b4acfa7013bc0e055a6335be74bbee6dc53be9&amp;source=constructor" width="1440" height="416" frameborder="0"></iframe>
       <div class="company-address__map--marker">
         <a href="">
           <img src="" alt="balun" class="map-marker__icon">
@@ -218,7 +219,7 @@
               <input type="email" id="email" placeholder="Для отправки ответа" class="modal-input">
             </p>
             <p>
-              <label  class="modal-label">Текст письма:</label>
+              <label class="modal-label">Текст письма:</label>
               <br>
               <textarea name="text" id="" cols="30" rows="0" placeholder="В свободной форме" class="modal-textarea"></textarea>
             </p>

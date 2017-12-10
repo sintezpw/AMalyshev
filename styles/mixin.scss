@@ -1,13 +1,14 @@
+
 @mixin logoefect{
   &:link{
     box-shadow: inset 1px 2px 0 rgba(0, 1, 1, 0.33);
     background-image: linear-gradient(-4deg, #000101 0%, #a6a6a6 100%);
   }
-   &:hover{
-        opacity: 0.8;
+  &:hover{
+    opacity: 0.8;
     }
-    &:active{
-        opacity: 0.3;
+  &:active{
+    opacity: 0.3;
     }
 }
 @mixin links{
@@ -19,11 +20,11 @@
 }
 @mixin linkefekt{
     &:hover{
-        color:$btnred;
+      color:$btnred;
     }
     &:active{
       color: #000000;
-       opacity: 0.3;  
+      opacity: 0.3;
     }
 }
 @mixin slaidtitle{
@@ -87,20 +88,26 @@
 font: {
     family:'Roboto';
     weight:700;
-  size: 24px;
+    size: 24px;
 }
 }
 @mixin desccomp ($size,$weight){
 font: {
     family:'Roboto';
 }
-font-size: $size;
+    font-size: $size;
 }
 @mixin textbtn ($size,$weight){
 font: {
     family:'Roboto';
 }
-font-size:$size;
-color:$white;
+    font-size:$size;
+    color:$white;
+}
+@mixin info ($size,$weight){
+    font:{
+    family: 'Roboto';
+  }
+  font-size: $size;
 }
 

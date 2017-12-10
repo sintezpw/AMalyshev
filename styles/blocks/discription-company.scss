@@ -16,44 +16,97 @@
   }
 .description-orders{
     width: 435px;
-    height: 160px;
     margin-top: 47px;
 &__title{
   @include desccomp(16px,700);
   margin-top: 22px;
   text-transform: uppercase;
 }
-&__link{
-  
-    @include slaidtext;
-    text-decoration: none;
-    line-height:34px;
-   
-    }
+&__link {
+  @include slaidtext;
+  text-decoration: none;
+  line-height: 34px;
+}
+  &__link::before{
+    display: block;
+    position: absolute;
+    content: '';
+    width : 25px;
+    border-bottom : 2px solid #fb565a;
+    margin-left : -35px;
+    margin-top : 17px;
   }
-.promo-company{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: -380px;
-&__logo{
+  }
+.promo-company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: -430px;
+  &__logo {
     width: 100%;
-    }
-&__heading-title {
-    @include desccomp(16px,700);
+  }
+  &__heading-title {
+    @include desccomp(16px, 700);
     text-transform: uppercase;
     margin-top: 30px;
-}
-&__subtitle{
-      display: flex;
-      flex-direction: column;
-    }
-&__info{
-      display: flex;
-    }
   }
-.clients-company{
+  .promo-more {
     display: flex;
     justify-content: space-between;
+    width: 340px;
+    &__info {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      @include desccomp(45px, 700);
+      line-height: 10.06px;
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
+    &__subtitle {
+      width: 105px;
+      @include slaidtext;
+      line-height: 18px;
+      padding-top: 20px;
+    }
   }
 }
+  .clients-company {
+    display: flex;
+    justify-content: space-around;
+
+    &__logo1,
+    &__logo2,
+    &__logo3,
+    &__logo4   {
+      margin-top: 46px;
+      margin-bottom: 40px;
+    }
+    &__logo1:hover{
+      background: url("/img/logo-1copy.png")no-repeat ;
+      }
+    &__logo1:active{
+      background: url("/img/logo-1copy2.png")no-repeat ;
+        }
+    &__logo2:hover{
+      background:url("/img/logo-2-copy.png")no-repeat;
+    }
+    &__logo2:active{
+      background:url("/img/logo2-copy2.png")no-repeat;
+    }
+    &__logo3:hover{
+      background:url("/img/logo-3copy.png")no-repeat;
+}
+    &__logo3:active{
+      background:url("/img/logo-3copy2.png")no-repeat;
+    }
+    &__logo4:hover{
+      background:url("/img/logo-4copy.png")no-repeat;
+    }
+    &__logo4:active{
+      background: url("/img/logo4copy2.png")no-repeat;
+    }
+
+  }
+}
+
