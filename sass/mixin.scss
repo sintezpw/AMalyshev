@@ -83,11 +83,10 @@
     opacity: 0.3;
   }
 }
-@mixin desc{
+@mixin desc ($size,$weight){
 font: {
     family:'Roboto';
-    weight:700;
-  size: 24px;
+    
 }
 }
 @mixin textbtn ($size,$weight){
@@ -96,5 +95,10 @@ font: {
 }
 font-size:$size;
 color:$white;
+}
+@mixin text($size,$weight){
+    font: {
+        family:$fontfamily;
+    }
 }
 

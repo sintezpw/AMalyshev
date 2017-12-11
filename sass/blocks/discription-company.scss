@@ -1,8 +1,10 @@
 .discription-company{
 
   &__title{
-    @include desc ;
+    @include desc (24px,700) ;///
     width: 400px;
+    margin-top: 50px;
+    line-height: 45px;
   }
   &__desc{
     display: flex;
@@ -22,12 +24,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: -240px;
+    margin-top: -300px;
     &__logo{
-
+      width: 100%;
+      margin-top: 140px;
     }
     &__heading-title{
-
+@include text(16px,700);///
+font-family: 'Roboto';
+text-transform: uppercase;
+line-height: 24px;
     }
     &__subtitle{
       display: flex;

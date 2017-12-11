@@ -8,7 +8,7 @@
      margin-top: 20px;
   text-align:left;
     text-transform: uppercase;
-  @include desc ;
+  @include desc;///
 }
 &__item{
      @include slaidtext;
@@ -45,9 +45,7 @@
     @include btngreen;
     text-transform: uppercase;
 }
-
-
-  &--yellow{
+&--yellow{
     width:160px;
     padding: 10px 0 10px 0;
     border: none;
