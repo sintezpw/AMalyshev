@@ -105,7 +105,7 @@ font: {
     color:$white;
 }
 @mixin info ($size,$weight){
-    font:{
+    font: {
     family: 'Roboto';
   }
   font-size: $size;

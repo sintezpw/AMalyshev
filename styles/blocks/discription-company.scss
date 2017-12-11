@@ -74,7 +74,6 @@
   .clients-company {
     display: flex;
     justify-content: space-around;
-
     &__logo1,
     &__logo2,
     &__logo3,
@@ -105,8 +104,7 @@
     }
     &__logo4:active{
       background: url("/img/logo4copy2.png")no-repeat;
-    }
-
   }
+}
 }
 

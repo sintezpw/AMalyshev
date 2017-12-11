@@ -1,13 +1,13 @@
 .description-info {
-    display: flex;
-    flex-direction: column;
-    margin-top: 80px;
-    margin-right: 100px;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin-right: 100px;
+  width: 300px;
 &__title{
-     margin-top: 20px;
+  margin-top: 20px;
   text-align:left;
-    text-transform: uppercase;
+  text-transform: uppercase;
   @include desc ;
 }
 &__item{
@@ -33,7 +33,7 @@
   cursor: pointer;
   text-transform: uppercase;
   }
-  &--green {
+&--green {
     width: 160px;
     padding: 10px 0 10px 0;
     border: none;
@@ -45,9 +45,7 @@
     @include btngreen;
     text-transform: uppercase;
 }
-
-
-  &--yellow{
+&--yellow{
     width:160px;
     padding: 10px 0 10px 0;
     border: none;
@@ -59,7 +57,4 @@
     @include textbtn(16px, 500);
     text-transform: uppercase;
   }
-
-
-
 }
