@@ -83,7 +83,7 @@ gulp.task('browser-sync', function () {
 
 
 
-gulp.task('watch', ['browser-sync', 'sass', 'html'], function () {
+gulp.task('watch', ['browser-sync', 'sass', 'html','img'], function () {
     gulp.watch('sass/**/*scss', ['sass']);
     gulp.watch('*/.html', browserSync.reload);  ////
 });
@@ -143,7 +143,7 @@ gulp.task("webp", function () {
         .pipe(gulp.dest("img"));
 });
 
-gulp.task("images", function () {
+gulp.task("img", function () {
     return gulp.src("img/**/*.{png,jpg,svg}")
         .pipe(imagemin([
             imagemin.optipng({ optimizationLevel: 3 }),
