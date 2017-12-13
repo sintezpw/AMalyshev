@@ -1,0 +1,66 @@
+{
+  "name": "amalyshev",
+  "version": "0.0.1",
+  "description": "Пробная сборка",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax sass",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve",
+    "images": "gulp images",
+    "copy": "gulp copy",
+    "clean": "gulp clean"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.scss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksmal76/AMalyshev.git"
+  },
+  "author": "Алексей",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksmal76/AMalyshev/issues"
+  },
+  "homepage": "https://github.com/aleksmal76/AMalyshev#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browsersync": "0.0.1-security",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-csso": "^3.0.0",
+    "gulp-htmlhint": "^1.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-posthtml": "^3.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^5.0.0",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webp": "^2.3.0",
+    "posthtml-include": "^1.1.0",
+    "run-sequence": "^2.2.0"
+  },
+  "dependencies": {
+    "browsersync": "0.0.1-security",
+    "del": "^3.0.0"
+  }
+}
