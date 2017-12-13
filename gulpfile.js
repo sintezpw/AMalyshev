@@ -30,7 +30,7 @@ var patch = {
     src: {
         html: 'src/.html',
         js: 'src/js/main.js',
-        style: 'src/sass/style.scss',      
+        style: 'src/sass/main.scss', ///    
         img: 'srs/img/**/*.*',
         fonts: 'src/fonts/**/*. */'
     },
@@ -89,7 +89,7 @@ gulp.task('watch', ['browser-sync', 'sass', 'html','img'], function () {
 });
 
 gulp.task("sass", function () {
-    gulp.src("sass/style.scss")
+    gulp.src("sass/main.scss")////
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([
