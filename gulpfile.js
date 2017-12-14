@@ -83,7 +83,8 @@ gulp.task('browser-sync', function () {
 
 
 
-gulp.task('watch', ['browser-sync', 'sass', 'html','img'], function () {
+gulp.task('watch', ['browser-sync', 'sass', 'html'], function () {
+
     gulp.watch('sass/**/*scss', ['sass']);
     gulp.watch('*/.html', browserSync.reload);  ////
 });
