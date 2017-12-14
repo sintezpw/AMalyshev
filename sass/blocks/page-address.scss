@@ -33,6 +33,21 @@
     margin-top: 22px;
 }
 }
+.modal-hidden{
+position: relative;
+margin-left: 65px;
+margin-top: -420px;
+width: 960px;
+height: 590px;
+box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+&__title{
+    @include desccomp(45px, 500);
+    margin-left: 100px;
+    
+
+}
+
+}
     } 
         
 
