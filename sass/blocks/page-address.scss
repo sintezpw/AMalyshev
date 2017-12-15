@@ -1,7 +1,8 @@
 .page-address{
 &__map{
+    width: 100%;
     margin-top: 80px;
-    }
+}
 &__marker{
     margin-top: -330px;
     margin-left: 700px;
@@ -15,7 +16,7 @@
     margin-left: 140px;
     margin-top: -230px; 
 &__title{
-@include info(18px,700);
+@include info(18px, 700);
     line-height: 30px;
     text-transform: uppercase;
     margin-left: 50px;
@@ -27,6 +28,8 @@
     margin-left: 50px; 
     }
 .btn{
+    width: 219px;
+    height: 50px;
     display: inline-block;
     vertical-align: top;
     margin-left: 50px;
@@ -34,21 +37,51 @@
 }
 }
 .modal-hidden{
-position: relative;
-margin-left: 65px;
-margin-top: -420px;
-width: 960px;
-height: 590px;
-box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
-&__title{
-    @include desccomp(45px, 500);
+    position: absolute;
+    background: $white;
     margin-left: 100px;
+    margin-top: -420px;
+    width: 960px;
+    height: 590px;
+    box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+&__title{
+    @include info(45px,700);
+    margin-left: 100px;
+    margin-top: 63px;
+}
+
+&__grup{
+    display: flex;
+    margin-left: 100px;
+    flex-wrap: wrap
+}
+&__label{
+    margin-left: 0px;
+     @include info(16px, 700);
+line-height:18px; 
+}
+&__input{
+    width: 360px;
+    height: 50px;
+    border: 2px solid #d7dcde;
+    background-color: #ffffff;
+margin-right: 40px;
+
+}
+&__textarea{
+    @include info(16px, 400);
+
+}
+.btns{
+@include btnred;
+margin-left: 0px;
+margin-top: 30px;
+}
+
+}
+
+}
     
-
-}
-
-}
-    } 
         
 
 

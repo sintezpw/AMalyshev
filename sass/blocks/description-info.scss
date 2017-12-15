@@ -8,7 +8,9 @@
   margin-top: 20px;
   text-align:left;
   text-transform: uppercase;
-  @include desc ;
+  
+  @include info(24px, 700);
+
 }
 &__item{
      @include slaidtext;

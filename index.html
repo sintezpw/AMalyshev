@@ -199,29 +199,30 @@
             <p class="address-desc__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                 <br>
                 <br> тел. +7 (812) 275-75-75</p>
-            <button class="btn btn--red">Напишите нам</button>
+            <button class="btn btn--red" type="button">Напишите нам</button>
             <div class="modal-hidden">
                 <h2 class="modal-hidden__title">Напишите нам</h2>
-                <div class="modal-form__grup">
-                    <form action="#" enctype="multipart/form-data" method="post">
+                
+                    <form action="#" enctype="multipart/form-data" method="post" class="modal-hidden__grup">
                         <p>
-                            <label for="name" class="modal-label">Ваше имя:</label>
-                            <br>
-                            <input type="text" id="name" placeholder="Представтесь пожалуйста" class="modal-input">
+                            <label for="name" class="modal-hidden__label">Ваше имя:</label>
+                            <br><br>
+                            <input type="text" id="name" placeholder="Представтесь пожалуйста" class="modal-hidden__input">
                         </p>
                         <p>
-                            <label for="email" class="modal-label">Ваше e-mail:</label>
-                            <br>
-                            <input type="email" id="email" placeholder="Для отправки ответа" class="modal-input">
+                            <label for="email" class="modal-hidden__label">Ваше e-mail:</label>
+                            <br><br>
+                            <input type="email" id="email" placeholder="Для отправки ответа" class="modal-hidden__input">
                         </p>
                         <p>
-                            <label class="modal-label">Текст письма:</label>
-                            <br>
-                            <textarea name="text" id="" cols="30" rows="0" placeholder="В свободной форме" class="modal-textarea"></textarea>
+                            <label class="modal-hidden__label">Текст письма:</label>
+                            <br><br>
+                            <textarea name="text" id="" cols="81" rows="5" placeholder="В свободной форме" class="modal-hidden__textarea"></textarea>
                         </p>
-                        <input type="submit" value="отправить" class="modal-hidden__btn">
+                        <button class="btns btn--red" type="submit">отправить</button>
+                        
                     </form>
-                </div>
+                
             </div>
         </div>
     </div>
