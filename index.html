@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="sass/main.scss">
+    <link rel="stylesheet" href="js/main.js">
+    <link rel="stylesheet" type="text/css" media="all" href="fancybox/jquery.fancybox.css">
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+    <script src="js/main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -199,34 +203,37 @@
             <p class="address-desc__text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                 <br>
                 <br> тел. +7 (812) 275-75-75</p>
-            <button class="btn btn--red" type="button">Напишите нам</button>
-            <div class="modal-hidden">
-                <h2 class="modal-hidden__title">Напишите нам</h2>
+            <a href="javascript:void(0)" class="modal btn--red">Напишите нам</a>
+            <div class="popup-window">
+                <button type="button" class="popup-window__close">X</button>
+                <h2 class="popup-window__title">Напишите нам</h2>
                 
-                    <form action="#" enctype="multipart/form-data" method="post" class="modal-hidden__grup">
+                    <form action="#" enctype="multipart/form-data" method="post" class="popup-window__grup">
+                        
                         <p>
-                            <label for="name" class="modal-hidden__label">Ваше имя:</label>
+                            <label for="name" class="popup-window__label">Ваше имя:</label>
                             <br><br>
-                            <input type="text" id="name" placeholder="Представтесь пожалуйста" class="modal-hidden__input">
+                            <input type="text" id="name" placeholder="Представтесь пожалуйста" class="popup-window__input">
                         </p>
                         <p>
-                            <label for="email" class="modal-hidden__label">Ваше e-mail:</label>
+                            <label for="email" class="popup-window__label">Ваше e-mail:</label>
                             <br><br>
-                            <input type="email" id="email" placeholder="Для отправки ответа" class="modal-hidden__input">
+                            <input type="email" id="email" placeholder="Для отправки ответа" class="popup-window__input">
                         </p>
                         <p>
-                            <label class="modal-hidden__label">Текст письма:</label>
+                            <label class="popup-window__label">Текст письма:</label>
                             <br><br>
-                            <textarea name="text" id="" cols="81" rows="5" placeholder="В свободной форме" class="modal-hidden__textarea"></textarea>
+                            <textarea name="text" id="" cols="82" rows="5" placeholder="В свободной форме" class="popup-window__textarea"></textarea>
                         </p>
-                        <button class="btns btn--red" type="submit">отправить</button>
+                        
                         
                     </form>
-                
+                <button class="btns btn--red" type="submit">отправить</button>
             </div>
         </div>
     </div>
-    <footer>
+<footer>
+        <div class="wrapper">
         <div class="footer-socials">
             <div class="footer-socials__icons footer-socials__icons--wk"></div>
             <div class="footer-socials__icons footer-socials__icons--fb"></div>
@@ -236,10 +243,15 @@
             <h4 class="footer-slogan__text">Давайте дружить,это выгодно!</h4>
         </div>
         <div class="footer-subtitle">
-            <p>Скидка 10% для друзей из социальных сетей!</p>
-        </div>
-    </footer>
-    <script src="scripts/main.js"></script>
-</body>
+<p>Скидка 10% для друзей из социальных сетей!</p>
 
+
+        </div>
+    </div>
+    </footer>
+    <script src="js/main.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.min.js"></script>
+
+</body>
 </html>
